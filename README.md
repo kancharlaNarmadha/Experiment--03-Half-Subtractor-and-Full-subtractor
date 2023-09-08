@@ -78,7 +78,8 @@ endmodule
 
 # FULL SUBTRACTOR:
 
-![waveform fullsub](https://github.com/kancharlaNarmadha/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119559316/e2294153-c071-4d62-8374-5a860286c328)
+![WhatsApp Image 2023-09-08 at 09 24 50](https://github.com/kancharlaNarmadha/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119559316/fe558929-672c-467c-8894-33a06c62c5ac)
+
 
 
 ## Result:
