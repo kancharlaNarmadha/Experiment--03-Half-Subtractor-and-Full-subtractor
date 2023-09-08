@@ -1,4 +1,4 @@
-# Experiment--03-Half-Subtractor-and-Full-subtractor
+# Experiment 04 Half Subtractor and Full subtractor
 ## Implementation-of-Half-subtractor-and-Full-subtractor-circuit
 ## AIM:
 To design a half subtractor and full subtractor circuit and verify its truth table in Quartus using Verilog programming.
@@ -33,22 +33,53 @@ Write the detailed procedure here
 
 
 ## Program:
-/*
-Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+# Half Subtractor:
+```
+module exp4(A,B,diff,borrow);
+input A,B; output diff,borrow;
+wire X;
+xor(diff,A,B);
+not(X,A);
+and(borrow,X,B);
+endmodule
+```
+# Full Subtractor:
+```
+module fullsub(A,B,Bin,diff,borrow);
+input A,B,Bin;
+output diff,borrow;
+assign diff = A ^ B ^ Bin;
+assign borrow = (~A&B)|(~(A^B))&Bin;
+endmodule
+```
 
-## Output:
+##  RTL Diagram:
+# Half Subtrator:
 
-## Truthtable
+![exp4 rtl](https://github.com/kancharlaNarmadha/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119559316/b5635804-bc30-42a3-af08-cdec435c822f)
+
+# Full Subtractor:
 
 
+![exp 4 rtl fllsub](https://github.com/kancharlaNarmadha/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119559316/e826b312-38c1-4059-887c-890f4325ec8c)
 
-##  RTL realization
+# TRUTH TABLE:
+# HAFL SUBTRACTOR:
+![213157495-55fe7372-034a-4deb-a57a-c7808e35f670](https://github.com/kancharlaNarmadha/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119559316/bb77e32f-1b5b-4118-a932-5ba12385502e)
+
+# FULL SUBTRACTOR:
+
+![213157894-a8d50f39-7ebd-4939-a458-b86dda3fd8c5](https://github.com/kancharlaNarmadha/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119559316/3d7abca0-e92d-493d-b7c7-736731a0418d)
 
 
-## Timing diagram 
+## OUTPUT WAVEFORM:
+# HALF SUBTRACTOR:
+![exp4 waveform](https://github.com/kancharlaNarmadha/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119559316/5a12dd2f-d00e-457a-ac5e-9ca7a756735c)
+
+# FULL SUBTRACTOR:
+
+![waveform fullsub](https://github.com/kancharlaNarmadha/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119559316/e2294153-c071-4d62-8374-5a860286c328)
+
 
 ## Result:
 Thus the half subtractor and full subtractor circuits are designed and the truth tables is verified using quartus software.
